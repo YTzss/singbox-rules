@@ -1,4 +1,5 @@
 name: Build sing-box rule-sets
+# Public repository: https://github.com/YTzss/singbox-rules
 
 on:
   push:

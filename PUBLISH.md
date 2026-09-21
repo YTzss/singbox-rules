@@ -1,13 +1,15 @@
-# Publish this public repository
+# Published public repository
 
-The server currently has no authenticated GitHub CLI. After authenticating as
-the existing GitHub owner, run:
+The public rules repository is:
+
+`https://github.com/YTzss/singbox-rules`
+
+The local `origin` points to this repository. To publish future local commits,
+run:
 
 ```bash
 cd /home/ubuntu/singbox-rules
-gh auth login
-gh repo create moli20050328-opsa/singbox-rules --public
-git push -u origin main
+git push origin main
 ```
 
 In repository Settings → Actions → General, keep workflow permissions at
