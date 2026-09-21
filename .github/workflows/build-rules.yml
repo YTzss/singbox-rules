@@ -60,6 +60,7 @@ jobs:
             name="$(basename "${source_file}" .json)"
             test -s "compiled/${name}.srs"
           done
+          test -s compiled/proxy-services.srs
 
       - name: Commit changed binaries
         run: |
