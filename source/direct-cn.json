@@ -1,0 +1,44 @@
+{
+  "version": 5,
+  "rules": [
+    {
+      "domain_suffix": [
+        "cn",
+        "xn--fiqs8s",
+        "xn--55qx5d",
+        "xn--io0a7i",
+        "baidu.com",
+        "bdstatic.com",
+        "qq.com",
+        "weixin.qq.com",
+        "wechat.com",
+        "tencent.com",
+        "qcloud.com",
+        "tencent-cloud.com",
+        "alipay.com",
+        "taobao.com",
+        "tmall.com",
+        "aliyun.com",
+        "jd.com",
+        "bilibili.com",
+        "bilivideo.com",
+        "douyin.com",
+        "bytedance.com",
+        "byteimg.com",
+        "zhihu.com",
+        "xiaomi.com",
+        "mi.com",
+        "163.com",
+        "126.com",
+        "sina.com",
+        "weibo.com",
+        "csdn.net",
+        "douban.com",
+        "meituan.com",
+        "dianping.com",
+        "amap.com",
+        "gaode.com"
+      ]
+    }
+  ]
+}

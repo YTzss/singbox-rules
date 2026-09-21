@@ -1,0 +1,24 @@
+{
+  "version": 5,
+  "rules": [
+    {
+      "domain_suffix": [
+        "google.com",
+        "googleapis.com",
+        "googleapis.cn",
+        "gstatic.com",
+        "googleusercontent.com",
+        "googlevideo.com",
+        "googlemail.com",
+        "gmail.com",
+        "ggpht.com",
+        "withgoogle.com",
+        "youtube.com",
+        "youtube-nocookie.com",
+        "youtubeeducation.com",
+        "youtu.be",
+        "ytimg.com"
+      ]
+    }
+  ]
+}

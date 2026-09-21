@@ -1,0 +1,51 @@
+{
+  "version": 5,
+  "rules": [
+    {
+      "domain_suffix": [
+        "arxiv.org",
+        "doi.org",
+        "crossref.org",
+        "semanticscholar.org",
+        "researchgate.net",
+        "springer.com",
+        "springernature.com",
+        "nature.com",
+        "natureasia.com",
+        "natureindex.com",
+        "sciencedirect.com",
+        "elsevier.com",
+        "elsevier.io",
+        "els-cdn.com",
+        "wiley.com",
+        "ieee.org",
+        "computer.org",
+        "acm.org",
+        "acm-static.org",
+        "jstor.org",
+        "jstor.com",
+        "science.org",
+        "sciencemag.org",
+        "cell.com",
+        "cellpress.com",
+        "nih.gov",
+        "biorxiv.org",
+        "medrxiv.org",
+        "ssrn.com",
+        "webofscience.com",
+        "clarivate.com",
+        "researcherid.com",
+        "scopus.com",
+        "scopuspreview.com",
+        "overleaf.com",
+        "zotero.org",
+        "orcid.org",
+        "mendeley.com",
+        "proquest.com",
+        "tandfonline.com",
+        "sagepub.com",
+        "oup.com"
+      ]
+    }
+  ]
+}

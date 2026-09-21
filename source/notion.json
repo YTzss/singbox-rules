@@ -1,0 +1,14 @@
+{
+  "version": 5,
+  "rules": [
+    {
+      "domain_suffix": [
+        "notion.com",
+        "notion.so",
+        "notion.site",
+        "notion-static.com",
+        "notionusercontent.com"
+      ]
+    }
+  ]
+}

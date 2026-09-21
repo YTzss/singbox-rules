@@ -1,0 +1,47 @@
+name: Build sing-box rule-sets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "source/**"
+      - "scripts/**"
+      - ".github/workflows/build-rules.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-rules
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install stable sing-box
+        run: curl -fsSL https://sing-box.app/install.sh | sudo sh
+
+      - name: Validate and compile rules
+        run: ./scripts/build.sh
+
+      - name: Commit changed binaries
+        run: |
+          git diff --check
+          if git diff --quiet -- compiled; then
+            echo "No compiled changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add compiled
+          git commit -m "build: refresh compiled rule-sets"
+          git push
