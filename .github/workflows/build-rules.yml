@@ -24,12 +24,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Install stable sing-box
-        run: curl -fsSL https://sing-box.app/install.sh | sudo sh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          release_json="$(curl --fail --silent --show-error --location \
+            --header "Authorization: Bearer ${GH_TOKEN}" \
+            https://api.github.com/repos/SagerNet/sing-box/releases/latest)"
+          tag="$(jq -r '.tag_name' <<<"${release_json}")"
+          version="${tag#v}"
+          archive="sing-box-${version}-linux-amd64.tar.gz"
+          asset_url="$(jq -r --arg name "${archive}" \
+            '.assets[] | select(.name == $name) | .browser_download_url' \
+            <<<"${release_json}")"
+          test -n "${asset_url}"
+          curl --fail --silent --show-error --location --retry 3 \
+            --header "Authorization: Bearer ${GH_TOKEN}" \
+            --output "${RUNNER_TEMP}/${archive}" "${asset_url}"
+          tar -xzf "${RUNNER_TEMP}/${archive}" -C "${RUNNER_TEMP}"
+          sudo install -m 0755 \
+            "${RUNNER_TEMP}/sing-box-${version}-linux-amd64/sing-box" \
+            /usr/local/bin/sing-box
+          sing-box version
 
       - name: Validate and compile rules
         run: ./scripts/build.sh
