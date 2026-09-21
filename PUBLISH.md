@@ -6,7 +6,8 @@ the existing GitHub owner, run:
 ```bash
 cd /home/ubuntu/singbox-rules
 gh auth login
-gh repo create moli20050328-opsa/singbox-rules --public --source=. --remote=origin --push
+gh repo create moli20050328-opsa/singbox-rules --public
+git push -u origin main
 ```
 
 In repository Settings → Actions → General, keep workflow permissions at
