@@ -13,6 +13,9 @@ Public, credential-free routing rules for sing-box clients.
 `sing-geosite` and `sing-geoip` `rule-set` branches. Their upstream licenses apply.
 They are refreshed daily so clients need only this repository as a rule source.
 
+Locally maintained service rule-sets currently include AI, GitHub, Google and
+YouTube, Notion, research, X/Twitter, TikTok, Telegram, and Docker domains.
+
 ## Update a rule
 
 Edit the relevant file under `source/`, then commit and push. GitHub Actions

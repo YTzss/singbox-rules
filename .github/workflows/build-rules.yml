@@ -51,8 +51,15 @@ jobs:
             /usr/local/bin/sing-box
           sing-box version
 
-      - name: Validate and compile rules
+      - name: Validate and compile every source rule-set
         run: ./scripts/build.sh
+
+      - name: Verify every source has a compiled artifact
+        run: |
+          for source_file in source/*.json; do
+            name="$(basename "${source_file}" .json)"
+            test -s "compiled/${name}.srs"
+          done
 
       - name: Commit changed binaries
         run: |
