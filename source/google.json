@@ -3,10 +3,13 @@
   "rules": [
     {
       "domain_suffix": [
+        "app-companion-430619.appspot.com",
         "google.com",
+        "google-analytics.com",
         "googleapis.com",
         "googleapis.cn",
         "gstatic.com",
+        "googletagmanager.com",
         "googleusercontent.com",
         "googlevideo.com",
         "googlemail.com",
