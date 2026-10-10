@@ -3,6 +3,7 @@
   "rules": [
     {
       "domain_suffix": [
+        "android.com",
         "app-companion-430619.appspot.com",
         "google.com",
         "google-analytics.com",
@@ -13,11 +14,14 @@
         "googleusercontent.com",
         "googlevideo.com",
         "googlemail.com",
+        "googleplay.com",
         "gmail.com",
         "ggpht.com",
         "gvt1.com",
         "gvt2.com",
+        "gvt3.com",
         "withgoogle.com",
+        "xn--ngstr-lra8j.com",
         "youtube.com",
         "youtube-nocookie.com",
         "youtubeeducation.com",
